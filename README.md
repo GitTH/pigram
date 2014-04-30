@@ -1,4 +1,4 @@
-pi
+pigram
 ==
 
 Raspberry Pi Instagram Feed
