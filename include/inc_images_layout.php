@@ -2,7 +2,7 @@
 
 	function showFour() {
 		echo '<div class="col-lg-2">
-				<div class="row-fluid">
+				<div class="row">
 					<div class="col-lg-6 image-sm image">
 						<img src="" border="0" />
 					</div>
@@ -11,7 +11,7 @@
 						<img src="" border="0" />
 					</div>
 				</div>
-				<div class="row-fluid">
+				<div class="row">
 					<div class="col-lg-6 image-sm image">
 						<img src="" border="0" />
 					</div>
@@ -25,9 +25,9 @@
 	
 	function showTwelve() {
 		echo '<div class="col-lg-12">				
-				<div class="row-fluid">
+				<div class="row">
 					<div class="col-lg-2">
-						<div class="row-fluid">
+						<div class="row">
 							<div class="col-lg-6 image-sm image">
 								<img src="" border="0" />
 							</div>
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 					<div class="col-lg-2">
-						<div class="row-fluid">
+						<div class="row">
 							<div class="col-lg-6 image-sm image">
 								<img src="" border="0" />
 							</div>
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 					<div class="col-lg-2">
-						<div class="row-fluid">
+						<div class="row">
 							<div class="col-lg-6 image-sm image">
 								<img src="" border="0" />
 							</div>
@@ -60,7 +60,7 @@
 						</div>
 					</div>
 					<div class="col-lg-2">
-						<div class="row-fluid">
+						<div class="row">
 							<div class="col-lg-6 image-sm image">
 								<img src="" border="0" />
 							</div>
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					<div class="col-lg-2">
-						<div class="row-fluid">
+						<div class="row">
 							<div class="col-lg-6 image-sm image">
 								<img src="" border="0" />
 							</div>
@@ -82,7 +82,7 @@
 						</div>
 					</div>
 					<div class="col-lg-2">
-						<div class="row-fluid">
+						<div class="row">
 							<div class="col-lg-6 image-sm image">
 								<img src="" border="0" />
 							</div>
@@ -99,7 +99,7 @@
 	
 	function showOne() {
 		echo '<div class="col-lg-2">
-				<div class="row-fluid">
+				<div class="row">
 					<div class="col-lg-12 image-lg image">
 						<img src="" border="0" />
 					</div>
@@ -112,7 +112,7 @@
 <div id="images" class="container-fluid">
 
 		<!-- FIRST BIG ROW -->
-		<div class="row-fluid">
+		<div class="row">
 			
 			<?php
 			showFour();
@@ -132,7 +132,7 @@
 		<div class="clearfix visible-xs"></div>
 		
 		<!-- SECOND BIG ROW -->
-		<div class="row-fluid">
+		<div class="row">
 			
 			<?php			
 			showOne();
@@ -152,7 +152,7 @@
 		<div class="clearfix visible-xs"></div>
 		
 		<!-- THIRD BIG ROW -->
-		<div class="row-fluid">
+		<div class="row">
 			
 			<?php
 			showFour();
@@ -172,7 +172,7 @@
 		<div class="clearfix visible-xs"></div>
 		
 		<!-- FOURTH CROPPED ROW -->
-		<div class="row-fluid">
+		<div class="row">
 			
 			<?php
 			showTwelve();
