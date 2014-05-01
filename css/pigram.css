@@ -1,1 +1,5 @@
-body { margin: 0px; padding: 0px; }
+body { background-color: black; }
+
+img { width: 100%; height: auto; /* box-shadow: 0px 0px 15px rgba(100,100,100,.5); */ }
+
+#images { margin: 0px auto; max-width: 1920px; max-height: 1080px; overflow: hidden; background-color: black; background-image: url("../images/loading.gif"); background-position: center center; background-repeat: no-repeat; }
