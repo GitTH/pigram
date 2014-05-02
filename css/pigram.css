@@ -1,8 +1,20 @@
-body { background-color: black; }
+body { background-color: black; overflow-y: hidden; }
 
 img { width: 100%; height: auto; /* box-shadow: 0px 0px 15px rgba(100,100,100,.5); */ }
 
-#images { margin: 0px auto; max-width: 1920px; max-height: 1080px; overflow: hidden; background-color: black; background-image: url("../images/loading.gif"); background-position: center center; background-repeat: no-repeat; }
+.image { overflow: hidden; }
+
+#images { margin: 0px auto; padding: 0px; /* max-width: 1920px; max-height: 1080px; */ overflow: hidden; background-color: black; background-image: url("../images/loading.gif"); background-position: center center; background-repeat: no-repeat; }
+
+@media (min-width: 768px){
+    .row {
+    	margin-top: -1px;  /*added to eliminate holes that show the background*/
+        margin-right: 0;
+        margin-left: 0;
+        /* max-width: 1920px; */
+        overflow-x: hidden;
+    }
+}
 
 .col-1,
 .col-2,

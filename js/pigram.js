@@ -18,23 +18,43 @@ function pigram() {
 	 	type: "GET",
 	 	success: function(JsonFeed){
 	 		
-	 		console.log("success");
-	 		
+	 		//assign images to the layout
 	 		$.each(JsonFeed,function(key,val){
-	 			$("#image"+key).attr('src', val);
-	 			console.log(key + " " + val);
+	 			$("#image"+key).attr('src', val.url);
+	 			$("#image"+key).attr('data-instagram_id', val.instagram_id);
 	 		});	
 	 		
 	 	},
-	 	complete: function(){		 	
+	 	complete: function(){
+	 	
+	 		//after 1 second see if any images have not loaded and deactivate them
+	 		setTimeout(function() {
+		 		$("img").each(function(){ 
+					var image = $(this); 
+					if(image.context.naturalWidth == 0 || image.readyState == 'uninitialized'){
+						$(this).attr('src','images/no_image.svg');
+						deactivateImage($(this).attr('data-instagram_id'));
+					}
+				});
+			}, 1000); 	
 	 				 	
 	 	},
 	 	error: function(xhr, ajaxOptions, thrownError){
-		 	//console.error(xhr.status);
-		 	//console.error(thrownError);
+		 	console.error(xhr.status);
+		 	console.error(thrownError);
 	 	}
 	 });
 
+}
+
+function deactivateImage(instagram_id) {
+	
+	var url = "data/deactivate.php?instagram_id="+instagram_id;
+	
+	$.ajax({
+	 	url: url,
+	 	type: "GET"
+	 });	
 }
 
 $(document).ready(function(){
