@@ -1,5 +1,6 @@
 <?php
 //Edit this file and rename it "setup.php"
+//Make this work
 
 //adodb
 $path_to_adodb = "PATH_TO_ADODB";
