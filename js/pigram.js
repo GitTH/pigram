@@ -33,10 +33,10 @@ function pigram() {
 					var image = $(this); 
 					if(image.context.naturalWidth == 0 || image.readyState == 'uninitialized'){
 						$(this).attr('src','images/no_image.svg');
-						deactivateImage($(this).attr('data-instagram_id'));
+						//deactivateImage($(this).attr('data-instagram_id'));
 					}
 				});
-			}, 1000); 	
+			}, 5000); 	
 	 				 	
 	 	},
 	 	error: function(xhr, ajaxOptions, thrownError){
