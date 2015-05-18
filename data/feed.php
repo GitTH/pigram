@@ -2,7 +2,7 @@
 include("../setup.php");
 
 //how many images should we get?
-if ($_REQUEST['images_to_get'] != '') {
+if (isset($_REQUEST['images_to_get'])) {
 	$images_to_get = $_REQUEST['images_to_get'];
 } else {
 	$images_to_get = 84;
@@ -11,7 +11,7 @@ if ($_REQUEST['images_to_get'] != '') {
 //get the feed
 $db = newDB();
 $feed_sql = "SELECT `i`.* FROM `social_instagram` as `i` WHERE `i`.`active` = 'Y' AND `i`.`type` = 'image' ORDER BY `i`.`time_subscription_unix` DESC LIMIT 0,$images_to_get";
-$feed = $db->GetAll($feed_sql);
+$feed = $db->query($feed_sql);
 //print_r($feed);
 
 //lets loop through to see if they exist
