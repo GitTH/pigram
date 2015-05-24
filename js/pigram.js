@@ -20,20 +20,20 @@ function pigram() {
 	 		
 	 		//assign images to the layout
 	 		$.each(JsonFeed,function(key,val){
-	 			$("#image"+key).attr('src', val.url);
-	 			$("#image"+key).attr('data-instagram_id', val.instagram_id);
+//	 			$("#image"+key).attr('src', val.url);
+	 			$("#image"+key).attr('src', 'http://instagram.com/p/'+val.instagram_shortcode+'/media/?size=l');
+	 			$("#image"+key).attr('instagram_shortcode', val.instagram_shortcode);
 	 		});	
 	 		
 	 	},
 	 	complete: function(){
-	 	
 	 		//after 1 second see if any images have not loaded and deactivate them
 	 		setTimeout(function() {
 		 		$("img").each(function(){ 
 					var image = $(this); 
 					if(image.context.naturalWidth == 0 || image.readyState == 'uninitialized'){
 						$(this).attr('src','images/no_image.svg');
-						//deactivateImage($(this).attr('data-instagram_id'));
+						//deactivateImage($(this).attr('data-instagram_shortcode'));
 					}
 				});
 			}, 5000); 	
@@ -47,9 +47,9 @@ function pigram() {
 
 }
 
-function deactivateImage(instagram_id) {
+function deactivateImage(instagram_shortcode) {
 	
-	var url = "data/deactivate.php?instagram_id="+instagram_id;
+	var url = "data/deactivate.php?instagram_shortcode="+instagram_shortcode;
 	
 	$.ajax({
 	 	url: url,

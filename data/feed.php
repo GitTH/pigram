@@ -10,7 +10,7 @@ if (isset($_REQUEST['images_to_get'])) {
 
 //get the feed
 $db = newDB();
-$feed_sql = "SELECT `i`.* FROM `social_instagram` as `i` WHERE `i`.`active` = 'Y' AND `i`.`type` = 'image' ORDER BY `i`.`time_subscription_unix` DESC LIMIT 0,$images_to_get";
+$feed_sql = "SELECT `i`.* FROM `social_instagram` as `i` WHERE `i`.`active` = '1' AND `i`.`type` = 'image' ORDER BY `i`.`created_time` DESC LIMIT 0,$images_to_get";
 $feed = $db->query($feed_sql);
 //print_r($feed);
 
@@ -18,7 +18,7 @@ $feed = $db->query($feed_sql);
 $cnt = 0;
 foreach($feed as $f) {
 	$pigram[$cnt]['url'] 			= $f['images_low_resolution'];
-	$pigram[$cnt]['instagram_id'] 	= $f['instagram_id'];
+	$pigram[$cnt]['instagram_shortcode'] 	= $f['instagram_shortcode'];
 	$cnt++;
 }
 
