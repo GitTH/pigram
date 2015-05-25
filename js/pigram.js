@@ -20,11 +20,13 @@ function pigram() {
 	 		
 	 		//assign images to the layout
 	 		$.each(JsonFeed,function(key,val){
-//	 			$("#image"+key).attr('src', val.url);
-	 			$("#image"+key).attr('src', 'http://instagram.com/p/'+val.instagram_shortcode+'/media/?size=l');
-	 			$("#image"+key).attr('instagram_shortcode', val.instagram_shortcode);
-	 		});	
-	 		
+  	 		//Use larger images for key images
+        if($("#image"+key).parent().hasClass('image-lg') == true) {
+          val.url = 'http://instagram.com/p/'+val.instagram_shortcode+'/media/?size=l';
+        }
+        $("#image"+key).attr('src', val.url);
+        $("#image"+key).attr('instagram_shortcode', val.instagram_shortcode);
+	 		});
 	 	},
 	 	complete: function(){
 	 		//after 1 second see if any images have not loaded and deactivate them
