@@ -107,77 +107,53 @@
 			</div>';
 	}
 	
-	
 ?>
 <div id="images" class="container-fluid">
 
 		<!-- FIRST BIG ROW -->
 		<div class="row">
-			
 			<?php
-			showFour();
-			
 			showOne();
-			
 			showFour();
-			
 			showFour();
-			
 			showFour();
-			
 			showOne();
+			showFour();
 			?>	
-		
 		</div>
 		<div class="clearfix visible-xs"></div>
 		
 		<!-- SECOND BIG ROW -->
 		<div class="row">
-			
 			<?php			
+			showFour();
+			showFour();
 			showOne();
-			
 			showFour();
-			
 			showFour();
-			
 			showOne();
-			
-			showFour();
-			
-			showFour();
 			?>	
-		
 		</div>
 		<div class="clearfix visible-xs"></div>
 		
 		<!-- THIRD BIG ROW -->
 		<div class="row">
-			
 			<?php
 			showFour();
-			
-			showFour();
-			
 			showOne();
-			
 			showFour();
-			
 			showOne();
-			
+			showFour();
 			showFour();
 			?>
-		
 		</div>
 		<div class="clearfix visible-xs"></div>
 		
 		<!-- FOURTH CROPPED ROW -->
 		<div class="row">
-			
 			<?php
 			showTwelve();
 			?>
-		
 		</div>
 		<div class="clearfix visible-xs"></div>
 		
