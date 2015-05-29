@@ -4,20 +4,20 @@
 		echo '<div class="col-lg-2">
 				<div class="row">
 					<div class="col-lg-6 image-sm image">
-						<img src="" border="0" />
+						<img src="images/pixel.gif" />
 					</div>
 					
 					<div class="col-lg-6 image-sm image">
-						<img src="" border="0" />
+						<img src="images/pixel.gif" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-6 image-sm image">
-						<img src="" border="0" />
+						<img src="images/pixel.gif" />
 					</div>
 					
 					<div class="col-lg-6 image-sm image">
-						<img src="" border="0" />
+						<img src="images/pixel.gif" />
 					</div>
 				</div>
 			</div>';
@@ -29,66 +29,66 @@
 					<div class="col-lg-2">
 						<div class="row">
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 							
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-2">
 						<div class="row">
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 							
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-2">
 						<div class="row">
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 							
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-2">
 						<div class="row">
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 							
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-2">
 						<div class="row">
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 							
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-2">
 						<div class="row">
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 							
 							<div class="col-lg-6 image-sm image">
-								<img src="" border="0" />
+								<img src="images/pixel.gif" />
 							</div>
 						</div>
 					</div>
@@ -101,7 +101,7 @@
 		echo '<div class="col-lg-2">
 				<div class="row">
 					<div class="col-lg-12 image-lg image">
-						<img src="" border="0" />
+						<img src="images/pixel.gif" />
 					</div>
 				</div>
 			</div>';
