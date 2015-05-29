@@ -29,7 +29,7 @@ function pigram() {
 	 		});
 	 	},
 	 	complete: function(){
-	 		//after 1 second see if any images have not loaded and deactivate them
+	 		//after 7 seconds see if any images have not loaded and deactivate them
 	 		setTimeout(function() {
 		 		$("img").each(function(){ 
 					var image = $(this); 
@@ -38,8 +38,7 @@ function pigram() {
 						//deactivateImage($(this).attr('data-instagram_shortcode'));
 					}
 				});
-			}, 5000); 	
-	 				 	
+			}, 7000);
 	 	},
 	 	error: function(xhr, ajaxOptions, thrownError){
 		 	console.error(xhr.status);
@@ -60,7 +59,7 @@ function deactivateImage(instagram_shortcode) {
 }
 
 $(document).ready(function(){
-	
-	pigram();
-	
+  pigram();
+  //refresh images every 60 seconds
+  setInterval(function(){pigram()}, 60000);
 });
