@@ -1,10 +1,10 @@
-body { background-color: black; overflow-y: hidden; }
+body { background:#000; overflow-y: hidden; }
 
 img { width: 100%; height: auto; /* box-shadow: 0px 0px 15px rgba(100,100,100,.5); */ }
 
 .image { overflow: hidden; }
 
-#images { margin: 0px auto; padding: 0px; /* max-width: 1920px; max-height: 1080px; */ overflow: hidden; background-color: black; background-image: url("../images/loading.gif"); background-position: center center; background-repeat: no-repeat; }
+#images { margin: 0px auto; padding: 0px; /* max-width: 1920px; max-height: 1080px; */ overflow: hidden; }
 
 @media (min-width: 768px){
     .row {
