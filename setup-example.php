@@ -1,6 +1,19 @@
 <?php
 //Edit this file and rename it "setup.php"
-//database
+
+//Initialise Instagram class
+require 'include/Instagram.php';
+use MetzWeb\Instagram\Instagram;
+
+$instagram = new Instagram(""); //insert Instagram Client ID here from https://instagram.com/developer/clients/manage/
+
+/*
+//accesstoken is not required for public accounts
+$accesstoken=""; //insert Instagram OAuth token
+$instagram->setAccessToken($accesstoken);
+*/
+
+//Initialise database connection
 function newDB() {
   try {
     $dbname = "";
