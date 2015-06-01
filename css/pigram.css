@@ -6,7 +6,7 @@ img { width: 100%; height: auto; /* box-shadow: 0px 0px 15px rgba(100,100,100,.5
 
 #images { margin: 0px auto; padding: 0px; /* max-width: 1920px; max-height: 1080px; */ overflow: hidden; }
 
-@media (min-width: 768px){
+@media (min-width: 480px){
     .row {
     	margin-top: -1px;  /*added to eliminate holes that show the background*/
         margin-right: 0;

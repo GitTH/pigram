@@ -1,7 +1,7 @@
 <?php
 
 	function showFour() {
-		echo '<div class="col-lg-2">
+		echo '<div class="col-lg-2 col-xs-4">
 				<div class="row">
 					<div class="col-lg-6 image-sm image">
 						<img src="images/pixel.gif" />
@@ -98,7 +98,7 @@
 	}
 	
 	function showOne() {
-		echo '<div class="col-lg-2">
+		echo '<div class="col-lg-2 col-xs-8">
 				<div class="row">
 					<div class="col-lg-12 image-lg image">
 						<img src="images/pixel.gif" />
