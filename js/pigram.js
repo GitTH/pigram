@@ -1,8 +1,8 @@
-function pigram() {
+var imgs = $(".image");
+var feed = "data/feed.php?images_to_get=" + imgs.length;
+var minFade = 0.45; //minimum desired opacity of images
 
-	var imgs = $(".image").length;
-	var feed = "data/feed.php?images_to_get=" + imgs;
-
+function pigram(){
 	if ($("#image0").length == 0) {
 		var cnt = 0;
 		$(".image").each(function(){
@@ -17,7 +17,6 @@ function pigram() {
 	 	dataType: "json",
 	 	type: "GET",
 	 	success: function(JsonFeed){
-	 		
 	 		//assign images to the layout
 	 		$.each(JsonFeed,function(key,val){
   	 		//Use larger images for key images
@@ -45,11 +44,9 @@ function pigram() {
 		 	console.error(thrownError);
 	 	}
 	 });
-
 }
 
 function deactivateImage(instagram_shortcode) {
-	
 	var url = "data/deactivate.php?instagram_shortcode="+instagram_shortcode;
 	
 	$.ajax({
@@ -58,8 +55,30 @@ function deactivateImage(instagram_shortcode) {
 	 });	
 }
 
+//randomise image array
+function shuffle(a){
+  for(var j, x, i = a.length; i; j = (Math.random() * i) | 0, x = a[--i], a[i] = a[j], a[j] = x);
+  return a;
+}
+
+//animation callback to start next fade-in
+function nextItemFade(items){
+  //fade-in the first element in the collection
+  items.eq(0).fadeTo(500, 1, function(){
+    //recurse, but without the first element
+    nextItemFade(items.slice(1));
+  }).delay(10000).fadeTo(500, minFade);
+}
+
+function twinkle(){
+  $(".image").fadeTo(500, minFade);
+  shuffle(imgs);
+  nextItemFade(imgs);
+}
+
 $(document).ready(function(){
   pigram();
-  //refresh images every 60 seconds
-  setInterval(function(){pigram()}, 60000);
+  setInterval(pigram, 180000);
+  setInterval(twinkle, 43000);
+  twinkle();
 });
