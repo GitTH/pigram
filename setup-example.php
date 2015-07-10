@@ -1,5 +1,15 @@
 <?php
-//Edit this file and rename it "setup.php"
+//Copy this file to setup.php for your local configuration
+
+//basic Javascript config section
+$jsconfig = "<script>
+var minFade = 0.45; //minimum desired opacity of images (0 to 1)
+var fadeDuration = 500; //time taken by fade effect (milliseconds)
+var brightDuration = 15000; //time each image will be at 100% opacity (milliseconds)
+var nextDelay = 400; //delay between animations (milliseconds)
+var loadingTimeout = 7000; //time until images that have not loaded are disabled (milliseconds)
+var refreshTimer = 180000; //time until feed refreshes (milliseconds)
+</script>";
 
 //Initialise Instagram class
 require 'include/Instagram.php';

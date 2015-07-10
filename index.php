@@ -8,6 +8,9 @@
 	</head>
 	<body>
 		<?php include("include/inc_images_layout.php"); ?>
+		<?php include("setup.php");
+			echo "\r\n$jsconfig\r\n";
+		?>
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script src="js/bootstrap-3.3.4.min.js"></script>
 		<script src="js/pigram.js"></script>

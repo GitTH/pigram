@@ -1,12 +1,5 @@
 var imgs = $(".image");
 var feed = "data/feed.php?images_to_get=" + imgs.length;
-//basic config section
-var minFade = 0.45; //minimum desired opacity of images (0 to 1)
-var fadeDuration = 500; //time taken by fade effect (milliseconds)
-var brightDuration = 15000; //time each image will be at 100% opacity (milliseconds)
-var nextDelay = 400; //delay between animations (milliseconds)
-var loadingTimeout = 7000; //time until images that have not loaded are disabled (milliseconds)
-var refreshTimer = 180000; //time until feed refreshes (milliseconds)
 
 function pigram(){
 	if ($("#image0").length == 0) {
