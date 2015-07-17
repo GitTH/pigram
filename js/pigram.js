@@ -31,7 +31,7 @@ function pigram(){
 		 		$("img").each(function(){ 
 					var image = $(this); 
 					if(image.context.naturalWidth == 0 || image.readyState == 'uninitialized'){
-						$(this).attr('src','images/no_image.svg');
+						$(this).attr('src',timeoutImage);
 						//deactivateImage($(this).attr('instagram_shortcode'));
 					}
 				});

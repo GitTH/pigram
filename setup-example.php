@@ -9,6 +9,7 @@ var brightDuration = 15000; //time each image will be at 100% opacity (milliseco
 var nextDelay = 400; //delay between animations (milliseconds)
 var loadingTimeout = 7000; //time until images that have not loaded are disabled (milliseconds)
 var refreshTimer = 180000; //time until feed refreshes (milliseconds)
+var timeoutImage = 'images/no_image.svg';
 </script>";
 
 //Initialise Instagram class
