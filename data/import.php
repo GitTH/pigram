@@ -57,10 +57,15 @@ if (isset($_GET['userid']) && is_numeric($_GET['userid'])) {
       $result = $instagram->pagination($result);
     }
     while (isset($result->pagination));
-  } else {
+    } else {
     importMedia($result);
   }
   echo '<p><a href="import.php" class="btn btn-success">Click here to start again</a></p>';
+} elseif (isset($_GET['userfeed']) && $_GET['userfeed']==1) {
+  //todo: document this feature - if ?userfeed=1, latest 66 images from users the authenticated account follows will be imported
+  $result = $instagram->getUserFeed(33);
+  importMedia($result);
+  importMedia($instagram->pagination($result,33));
 } else {
   //display form if it has not been submitted or ID was not a number
   echo '<form class="form-inline" role="form">
