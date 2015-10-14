@@ -20,7 +20,7 @@ function pigram(){
 	 		$.each(JsonFeed,function(key,val){
   	 		//Use larger images for key images
         if($("#image"+key).parent().hasClass('image-lg') == true) {
-          val.url = 'http://instagram.com/p/'+val.instagram_shortcode+'/media/?size=l';
+          val.url = val.url_lg;
         }
         $("#image"+key).attr('src', val.url);
         $("#image"+key).attr('instagram_shortcode', val.instagram_shortcode);

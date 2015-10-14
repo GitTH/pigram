@@ -17,8 +17,9 @@ $feed = $db->query($feed_sql);
 //lets loop through to see if they exist
 $cnt = 0;
 foreach($feed as $f) {
-	$pigram[$cnt]['url'] 			= $f['images_low_resolution'];
-	$pigram[$cnt]['instagram_shortcode'] 	= $f['instagram_shortcode'];
+	$pigram[$cnt]['url'] = $f['images_low_resolution'];
+	$pigram[$cnt]['url_lg'] = $f['images_high_resolution'];
+	$pigram[$cnt]['instagram_shortcode'] = $f['instagram_shortcode'];
 	$cnt++;
 }
 

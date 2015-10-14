@@ -20,8 +20,8 @@
 include("../setup.php");
 function importMedia($resultObject) {
   $db = newDB();
-  $sql="INSERT INTO social_instagram(instagram_shortcode,user_id,images_low_resolution,type,created_time)
-  VALUES (:shortcode,:userID,:image,:type,:time)
+  $sql="INSERT INTO social_instagram(instagram_shortcode,user_id,images_low_resolution,images_high_resolution,type,created_time)
+  VALUES (:shortcode,:userID,:imagelo,:imagehi,:type,:time)
   ON DUPLICATE KEY UPDATE instagram_shortcode=:shortcode";
   $s = $db->prepare($sql);
   echo "<ol>";
@@ -30,7 +30,8 @@ function importMedia($resultObject) {
     try {
       $s->bindValue(':userID', $media->user->id);
       $s->bindValue(':shortcode', $shortcode[4]);
-      $s->bindValue(':image', $media->images->low_resolution->url);
+      $s->bindValue(':imagelo', $media->images->low_resolution->url);
+      $s->bindValue(':imagehi', $media->images->standard_resolution->url);
       $s->bindValue(':type', $media->type);
       $s->bindValue(':time', $media->created_time);
       $s->execute();
