@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Pi Gram - Import</title>
+	<title>pigram import</title>
 	<link href="../css/bootstrap-3.3.4.min.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
