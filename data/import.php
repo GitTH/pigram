@@ -22,16 +22,21 @@ function importMedia($resultObject) {
   $db = newDB();
   $sql="INSERT INTO social_instagram(instagram_shortcode,user_id,images_low_resolution,images_high_resolution,type,created_time)
   VALUES (:shortcode,:userID,:imagelo,:imagehi,:type,:time)
-  ON DUPLICATE KEY UPDATE instagram_shortcode=:shortcode";
+  ON DUPLICATE KEY UPDATE images_low_resolution=:imagelo,images_high_resolution=:imagehi";
   $s = $db->prepare($sql);
   echo "<ol>";
   foreach ($resultObject->data as $media) {
     $shortcode=explode('/',$media->link);
+    // enforce square media by requesting resized thumbnails
+    $square = $media->images->thumbnail->url;
+    $imagelo = str_replace("/s150x150/","/s320x320/",$square); // formerly $media->images->low_resolution->url
+    $imagehi = str_replace("/s150x150/","/s640x640/",$square); // formerly $media->images->standard_resolution->url
+
     try {
       $s->bindValue(':userID', $media->user->id);
       $s->bindValue(':shortcode', $shortcode[4]);
-      $s->bindValue(':imagelo', $media->images->low_resolution->url);
-      $s->bindValue(':imagehi', $media->images->standard_resolution->url);
+      $s->bindValue(':imagelo', $imagelo);
+      $s->bindValue(':imagehi', $imagehi);
       $s->bindValue(':type', $media->type);
       $s->bindValue(':time', $media->created_time);
       $s->execute();
